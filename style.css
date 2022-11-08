@@ -1,0 +1,106 @@
+/*// BASE STYLES //*/
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky{
+  height: 40%;
+  background: skyblue;
+}
+
+.grass{
+  height: 30%;
+  background: seagreen;
+}
+
+.road{
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+/*// ELEMENTS TO ANIMATE //*/
+.mario{
+  position: absolute;
+  top: -150px;
+  left: 0; 
+
+  animation: move 3s both infinite linear, 
+             jump 1s ease both ;
+  
+}
+
+
+/*// KEYFRAMES //*/
+@keyframes move {
+  0%{ transform: translateX(-100px)}
+  100%{transform: translateX(1900px)}
+}
+
+@keyframes jump {
+  0%{top:-150px}  
+  50%{top:-200px}
+  100%{top:-150px}
+}
+
+.cloud2{
+  position: absolute;
+  transform: translateY(300px);
+  transform: translateX(-100px);
+  top:100px;
+  animation-name: moving;
+  animation-duration: 20s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  background-blend-mode:darken;
+  
+
+}
+
+.cloud1{
+  animation-name: moving;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    
+}
+
+@keyframes moving {
+  0% {
+      transform: translateX(-100px)
+    }
+  
+    100% {
+      transform: translateX(1200px)
+    }
+}
+
+
+
+
+
+
+
+
